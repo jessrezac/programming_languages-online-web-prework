@@ -41,11 +41,11 @@ def reformat_languages(languages)
       new_hash[language] = details
       new_hash[language][:style] = []
 
-      while style == :oo
+      if style == :oo
         new_hash[language][:style] << :oo
       end
 
-      while style == :functional
+      if style == :functional
         new_hash[language][:style] << :functional
       end
     end
