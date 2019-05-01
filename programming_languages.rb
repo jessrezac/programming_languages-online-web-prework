@@ -41,14 +41,15 @@ def reformat_languages(languages)
       new_hash[language] = details
       if new_hash[language].include?(:style)
         new_hash[language][:style] << style
-        binding.pry
-
       else
         new_hash[language][:style] = []
         new_hash[language][:style] << style
       end
     end
   end
+
+  binding.pry
+
 
   new_hash
 
