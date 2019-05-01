@@ -40,14 +40,7 @@ def reformat_languages(languages)
     languages_by_style.each do |language, details|
       new_hash[language] = details
       new_hash[language][:style] = []
-
-      if style == :oo
-        new_hash[language][:style] << :oo
-      end
-
-      if style == :functional
-        new_hash[language][:style] << :functional
-      end
+      new_hash[language][:style] << style
     end
   end
     binding.pry
