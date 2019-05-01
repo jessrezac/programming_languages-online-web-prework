@@ -40,11 +40,11 @@ def reformat_languages(languages)
     languages_by_style.each do |language, details|
       new_hash[language] = details
       if new_hash[language].include?(:style)
-        new_hash[language][:style] = []
         new_hash[language][:style] << style
         binding.pry
 
       else
+        new_hash[language][:style] = []
         new_hash[language][:style] << style
       end
     end
